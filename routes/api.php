@@ -1,6 +1,7 @@
 <?php
 
 use Coreproc\NovaArtisanCards\DatabaseBackup\DatabaseBackupController;
+use Coreproc\NovaArtisanCards\HorizonClear\HorizonClearController;
 use Coreproc\NovaArtisanCards\MaintenanceMode\MaintenanceModeController;
 use Coreproc\NovaArtisanCards\MigrateFresh\MigrateFreshController;
 use Illuminate\Support\Facades\Route;
@@ -23,3 +24,5 @@ Route::post('/artisan/down', [MaintenanceModeController::class, 'down']);
 Route::post('/artisan/up', [MaintenanceModeController::class, 'up']);
 
 Route::post('/artisan/database-backup', DatabaseBackupController::class);
+
+Route::post('/artisan/horizon-clear', [HorizonClearController::class, 'clear']);
