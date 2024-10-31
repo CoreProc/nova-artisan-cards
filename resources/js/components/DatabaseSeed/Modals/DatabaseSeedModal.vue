@@ -18,7 +18,7 @@
             >
               <div class="w-full px-6 md:mt-2 @md/modal:mt-2 md:px-8 @md/modal:px-8 md:w-1/5 @md/modal:w-1/5">
                 <label for="test-default-text-field" class="inline-block leading-tight space-x-1">
-                  <span>Seeder Class</span>
+                  <span>Class</span>
                 </label>
               </div>
               <div class="w-full space-y-2 md:w-3/5 @md/modal:w-3/5">
