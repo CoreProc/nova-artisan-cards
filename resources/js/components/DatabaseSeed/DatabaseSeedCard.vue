@@ -29,7 +29,6 @@
 </template>
 
 <script>
-
 import {Button} from "laravel-nova-ui";
 import DatabaseSeedModal from './Modals/DatabaseSeedModal.vue'
 
