@@ -16,7 +16,7 @@ class DatabaseSeedController extends Controller
 
         $command = ['php', base_path('artisan'), 'db:seed'];
         if ($seederClass !== 'DatabaseSeeder') {
-            $command[] = '--class=' . escapeshellarg($seederClass);
+            $command[] = '--class=' . $seederClass;
         }
 
         $process = new Process($command);
