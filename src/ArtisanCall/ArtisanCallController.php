@@ -7,8 +7,6 @@ use Illuminate\Http\JsonResponse;
 use Illuminate\Routing\Controller;
 use Symfony\Component\Process\Exception\ProcessFailedException;
 use Symfony\Component\Process\Process;
-use function Coreproc\NovaArtisanCards\HorizonClear\base_path;
-use function Coreproc\NovaArtisanCards\HorizonClear\response;
 
 class ArtisanCallController extends Controller
 {
