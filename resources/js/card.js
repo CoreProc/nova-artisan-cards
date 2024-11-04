@@ -4,6 +4,7 @@ import MaintenanceModeWarningCard from "./components/MaintenanceMode/Maintenance
 import DatabaseBackupCard from "./components/DatabaseBackup/DatabaseBackupCard.vue";
 import HorizonClearCard from "./components/HorizonClear/HorizonClearCard.vue";
 import ArtisanCallCard from "./components/ArtisanCall/ArtisanCallCard.vue";
+import DatabaseSeedCard from './components/DatabaseSeed/DatabaseSeedCard.vue'
 
 Nova.booting((app, store) => {
   app.component('nova-artisan-migrate-fresh-card', MigrateFreshCard)
@@ -12,4 +13,5 @@ Nova.booting((app, store) => {
   app.component('nova-artisan-database-backup-card', DatabaseBackupCard)
   app.component('nova-artisan-horizon-clear-card', HorizonClearCard)
   app.component('nova-artisan-artisan-call-card', ArtisanCallCard)
+  app.component('nova-artisan-database-seed-card', DatabaseSeedCard)
 })
