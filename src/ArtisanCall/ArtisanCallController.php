@@ -18,7 +18,7 @@ class ArtisanCallController extends Controller
 
         $command = ['php', base_path('artisan')];
         if (isset($artisanCall)) {
-            $command[] = escapeshellarg($artisanCall);
+            $command = array_merge($command, explode(' ', $artisanCall));
         }
 
         $process = new Process($command);

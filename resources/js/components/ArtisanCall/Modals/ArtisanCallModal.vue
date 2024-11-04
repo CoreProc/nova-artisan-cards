@@ -23,7 +23,7 @@
               </div>
               <div class="w-full space-y-2 md:w-3/5 @md/modal:w-3/5">
                 <div class="space-y-1">
-                  <input type="text" placeholder="default"
+                  <input type="text" placeholder="Enter Command"
                          v-model="command"
                          class="w-full form-control form-input form-control-bordered"
                          id="test-default-text-field" maxlength="-1">
@@ -79,7 +79,7 @@ export default {
 
   data: () => ({
     working: false,
-    command: "default",
+    command: "",
   }),
 
   watch: {
