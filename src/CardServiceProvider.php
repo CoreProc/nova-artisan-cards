@@ -18,6 +18,11 @@ class CardServiceProvider extends ServiceProvider
             $this->routes();
         });
 
+        // Publish config file
+        $this->publishes([
+            __DIR__ . '/../config/nova-artisan-cards.php' => config_path('nova-artisan-cards.php'),
+        ], 'nova-artisan-cards-config');
+
         Nova::serving(function (ServingNova $event) {
             Nova::script('nova-artisan-cards', __DIR__.'/../dist/js/card.js');
             Nova::style('nova-artisan-cards', __DIR__.'/../dist/css/card.css');
