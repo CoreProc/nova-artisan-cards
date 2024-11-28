@@ -18,7 +18,7 @@
         </Button>
       </div>
     </div>
-    <ConfirmActionModal
+    <MigrateFreshConfirmationModal
       :show="showModal"
       title="Refresh Database"
       message="Are you sure you want to refresh the database? This will wipe the database and do a database migration, effectively putting the app into a clean slate."
@@ -33,11 +33,12 @@
 <script>
 
 import ConfirmActionModal from "../Modals/ConfirmActionModal.vue";
+import MigrateFreshConfirmationModal from "./Modals/MigrateFreshConfirmationModal.vue";
 import {Button} from "laravel-nova-ui";
 import {DateTime} from "luxon";
 
 export default {
-  components: {Button, ConfirmActionModal},
+  components: {Button, MigrateFreshConfirmationModal},
   props: [
     'card',
     // The following props are only available on resource detail cards...
@@ -52,12 +53,12 @@ export default {
     };
   },
   methods: {
-    async handleConfirm() {
+    async handleConfirm(seedData) {
       this.loading = true;
       try {
         const response = await Nova.request()
           .post('/nova-vendor/nova-artisan-cards/artisan/migrate-fresh', {
-            // Add any data you need to send with the request here
+            seedData: seedData,
           });
         console.log('Database refreshed successfully:', response);
         // Redirect user back to /
